@@ -1,0 +1,361 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *,
+    *:before,
+    *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgb(1, 184, 129);
+        background-image: url(./image/background-img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: rgb(255, 255, 255);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .filter-login {
+        width: 30% !important;
+        height: 70% !important;
+    }
+    
+    #login-container {
+        width: 30% !important;
+        height: 70% !important;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 40px 24px 12px 24px;
+        box-sizing: border-box;
+        z-index: 2;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    #filter {
+        width: 60%;
+        height: 95%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        z-index: 1;
+    }
+    
+    .container {
+        width: 60%;
+        height: 95%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 20px 24px 12px 24px;
+        box-sizing: border-box;
+        z-index: 2;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .container::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+    
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 6px;
+    }
+    
+    .input-box {
+        margin-left: 8px;
+        margin-right: 8px;
+        width: calc(100% / 2 - 20px);
+    }
+    
+    .mess {
+        margin-top: 4px;
+        margin-bottom: 4px !important;
+    }
+    
+    .errdiv {
+        width: 100%;
+        height: 16px;
+        padding-left: 8px;
+        margin-bottom: 6px;
+        margin-top: 8px;
+        display: flex;
+    }
+    
+    .login-input {
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 100%;
+    }
+    
+    .content-login {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100%;
+    }
+    
+    .error {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+        color: rgb(255, 179, 0) !important;
+    }
+    
+    .details {
+        display: block;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    
+    h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 48px;
+        width: 100%;
+        padding-left: 8px;
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    
+    .input {
+        display: block;
+        height: 32px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 300;
+        border: none;
+        color: rgb(255, 255, 255);
+    }
+    
+    .input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    
+    .input:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .input:focus {
+        color: rgb(53, 53, 53);
+        letter-spacing: 1px;
+    }
+    
+    .input:focus-visible {
+        border: none;
+        outline: none;
+    }
+    
+    .category {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 32px;
+    }
+    
+    .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    
+    .category label .dot {
+        height: 14px;
+        width: 14px;
+        border-radius: 100%;
+        margin-right: 8px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 4px solid transparent;
+        transition: all 0.3s ease;
+    }
+    
+    #dot-1:checked~.category label .one,
+    #dot-2:checked~.category label .two,
+    #dot-3:checked~.category label .three {
+        background-color: rgb(1, 184, 129);
+        border-color: rgb(255, 255, 255);
+    }
+    
+    .category label .dot:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .gender {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .gender:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    .button {
+        display: flex;
+        align-items: center;
+        padding-bottom: 23px;
+    }
+    
+    .button-login {
+        display: flex;
+        align-items: center;
+        padding-bottom: 23px;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding-top: 8px;
+    }
+    
+    .button-login input {
+        height: 40px !important;
+    }
+    
+    .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: rgb(0, 205, 144);
+        font-style: bold;
+    }
+    
+    .button input:hover {
+        background-color: rgb(0, 255, 179);
+        color: rgb(1, 85, 60);
+        font-weight: 600;
+    }
+    /* input-file */
+    
+    #images {
+        display: none;
+    }
+    
+    .btn-image {
+        display: block;
+        line-height: 32px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    
+    .btn-image:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #000;
+    }
+    
+    p {
+        width: 100%;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
+        text-align: right;
+        padding-right: 9px;
+        color: #fff;
+    }
+    
+    .login-p {
+        text-align: left !important;
+        padding-left: 9px;
+    }
+    
+    a {
+        color: rgb(0, 255, 179);
+        font-style: none;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    a {
+        position: relative;
+    }
+    
+    a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-radius: 4px;
+        background-color: rgb(0, 255, 179);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+    
+    a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    
+    @media(max-width: 744px) {
+        .container,
+        .content,
+        .category {
+            flex-direction: column;
+        }
+        .input-box {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .button input {
+            height: 40px;
+        }
+        h3 {
+            padding-left: 0;
+        }
+        p {
+            padding-right: 0;
+        }
+    }
